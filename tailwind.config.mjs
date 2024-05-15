@@ -14,6 +14,7 @@ export default {
 				primary: "#E2D8B1",
 				secondary: "#52AFA5",
 				accent: "#EF9932",
+				footer: "#B4B4B8",
 			},
 		},
 	},
