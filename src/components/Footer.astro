@@ -5,14 +5,18 @@ import Instagram from "./Icons/Instagram.astro";
 ---
 
 <div
-	class="mt-auto p-2 flex flex-col gap-4 w-full h-[150px] justify-center items-center text-footer"
+	class="overflow-hidden relative mt-autoflex flex flex-col gap-4 w-full h-[150px] justify-center items-center text-black"
 >
-	<h2>Escuela de Gimnasia y Cultura China</h2>
-	<div class="flex flex-col items-center gap-4">
+	<div
+		class="absolute -top-[15%] bg-dragon bg-cover opacity-25 w-full h-[170px] z-0"
+	>
+	</div>
+	<h2 class="z-10 text-center">Escuela de Gimnasia y Cultura China</h2>
+	<div class="z-10 flex flex-col items-center gap-4">
 		<div class="flex flex-row gap-4">
-			<Facebook fillColor="#B4B4B8" width={20} height={20} />
-			<Instagram fillColor="#B4B4B8" width={20} height={20} />
+			<Facebook fillColor="#000000" width={20} height={20} />
+			<Instagram fillColor="#000000" width={20} height={20} />
 		</div>
-		<Copyright fillColor="#B4B4B8" width={10} height={10} />
+		<Copyright fillColor="#000000" width={10} height={10} />
 	</div>
 </div>

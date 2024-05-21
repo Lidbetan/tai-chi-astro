@@ -7,6 +7,7 @@ export default {
 	theme: {
 		extend: {
 			backgroundImage: {
+				mountainsBg: "url(/assets/background.png)",
 				mountains1: "url(/assets/mountain_1.png)",
 				mountains2: "url(/assets/mountain_2.png)",
 				mountains3: "url(/assets/mountain_3.png)",
@@ -25,11 +26,13 @@ export default {
 				fog6: "url(/assets/fog_6.png)",
 				fog7: "url(/assets/fog_7.png)",
 				sun: "url(/assets/sun_rays.png)",
+				dragon: "url(/assets/banner-dragon.jpeg)",
 			},
 			colors: {
 				background: "#FAF8F0",
 				primary: "#E2D8B1",
 				secondary: "#52AFA5",
+				sky: "#C5EAE5",
 				accent: "#EF9932",
 				footer: "#B4B4B8",
 			},
