@@ -1,22 +1,64 @@
 ---
+import Image from "astro/components/Image.astro";
 import Copyright from "./Icons/Copyright.astro";
 import Facebook from "./Icons/Facebook.astro";
 import Instagram from "./Icons/Instagram.astro";
+import WhatsApp from "./Icons/WhatsApp.astro";
+import Email from "./Icons/Email.astro";
 ---
 
 <div
-	class="overflow-hidden relative mt-autoflex flex flex-col gap-4 w-full h-[150px] justify-center items-center text-black"
+	class="overflow-hidden p-2 gap-1 relative flex flex-col justify-between items-center mt-autoflex w-full h-[550px] md:h-[170px] text-black"
 >
+	<!-- DRAGON BACKGROUND CONTAINER -->
 	<div
-		class="absolute -top-[15%] bg-dragon bg-cover opacity-25 w-full h-[170px] z-0"
+		class="absolute -top-[15%] bg-dragon bg-cover opacity-25 w-full h-[700px] md:h-[200px] z-0"
 	>
 	</div>
-	<h2 class="z-10 text-center">Escuela de Gimnasia y Cultura China</h2>
-	<div class="z-10 flex flex-col items-center gap-4">
-		<div class="flex flex-row gap-4">
-			<Facebook fillColor="#000000" width={20} height={20} />
-			<Instagram fillColor="#000000" width={20} height={20} />
+	<h2 class="z-10 text-center font-bold text-xl">
+		Escuela de Gimnasia y Cultura China
+	</h2>
+	<div class="flex flex-col gap-10 md:flex-row w-3/4 justify-evenly">
+		<!-- REDES SOCIALES -->
+		<div class="z-10 flex flex-col items-center gap-4">
+			<h2>Seguinos en</h2>
+			<div class="flex flex-row w-full justify-evenly">
+				<Facebook fillColor="#000000" width={34} height={34} />
+				<Instagram fillColor="#000000" width={34} height={34} />
+			</div>
 		</div>
-		<Copyright fillColor="#000000" width={10} height={10} />
+		<!-- CELULAR/EMAIL -->
+		<div class="z-10 flex flex-col items-center gap-1">
+			<h2>Contáctanos</h2>
+			<div class="flex flex-col gap-2 w-full justify-center items-center">
+				<div class="flex flex-row gap-1">
+					<WhatsApp width={20} height={20} fillColor="#000000" />
+					<p>+54-0341-155424959</p>
+				</div>
+				<div class="flex flex-row gap-1">
+					<Email width={20} height={20} fillColor="#000000" />
+					<p>sh.idbetan@gmail.com</p>
+				</div>
+			</div>
+		</div>
+		<!-- LOGO CENTRO MULAN Y SHAOLIN LA -->
+		<div class="z-10 flex flex-col items-center gap-4">
+			<h2>Avalados por</h2>
+			<div class="flex flex-row w-full justify-evenly">
+				<Image
+					src="/assets/logo-centro-mulan.png"
+					alt="logo Centro Mulan"
+					width={60}
+					height={60}
+				/>
+				<Image
+					src="/assets/logo-shaolin-la.png"
+					alt="logo Centro Mulan"
+					width={60}
+					height={60}
+				/>
+			</div>
+		</div>
 	</div>
+	<Copyright fillColor="#000000" width={10} height={10} />
 </div>
