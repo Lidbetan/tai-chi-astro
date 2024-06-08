@@ -1,6 +1,7 @@
 ---
-import Footer from "../components/Footer.astro";
-import Navbar from "../components/Navbar.astro";
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+import ViewTransitions from "astro/components/ViewTransitions.astro";
 
 interface Props {
 	title: string;
@@ -19,10 +20,13 @@ const { title } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<link rel="stylesheet" href="/src/styles/main.css" />
+		<!-- <ViewTransitions /> -->
 	</head>
-	<body class="bg-background">
-		<div class="content-container w-full flex flex-col flex-grow overflow-hidden">
-			<Navbar />
+	<body>
+		<Navbar />
+		<div
+			class="bg-mountainsBg bg-cover bg-no-repeat bg-top opacity-70 w-full h-screen flex flex-col flex-grow overflow-hidden"
+		>
 			<slot />
 		</div>
 		<Footer />
@@ -31,14 +35,13 @@ const { title } = Astro.props;
 			is:inline
 			src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
 		></script>
+		<style is:global>
+			body {
+				font-family: "Philosopher-regular", sans-serif;
+			}
+			h1 {
+				font-family: "Philosopher-Bold";
+			}
+		</style>
 	</body>
 </html>
-
-<style is:global>
-	body {
-		font-family: "Philosopher-regular", sans-serif;
-	}
-	h1 {
-		font-family: "Philosopher-Bold";
-	}
-</style>
