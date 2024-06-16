@@ -11,7 +11,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -26,12 +26,12 @@ const { title } = Astro.props;
 		<Navbar />
 		<!-- IMG BACKGROUND START  -->
 		<div
-			class="-z-10 opacity-70 absolute bg-mountainsBg bg-cover bg-no-repeat bg-top w-full min-h-[200vh] flex flex-col flex-grow overflow-hidden"
+			class="-z-10 opacity-70 absolute bg-mountainsBg bg-cover bg-no-repeat bg-top w-full min-h-[220vh] md:min-h-[100vh] flex flex-col flex-grow overflow-hidden"
 		>
 		</div>
 		<!-- IMG BACKGROUND END  -->
 		<div
-			class="mainContainer w-full min-h-[200vh] flex flex-col items-center justify-center"
+			class="mainContainer w-full min-h-[220vh] md:min-h-[100vh] flex flex-col items-center justify-center"
 		>
 			<main
 				class="z-10 opacity-100 w-11/12 lg:h-8/12 flex flex-col justify-center items-center mx-auto"

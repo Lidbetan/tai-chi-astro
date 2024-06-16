@@ -12,16 +12,18 @@ interface Props {
 const { img, title, body, alt, reverse } = Astro.props;
 ---
 
+<!-- Img+text container -->
 <div
 	class={reverse
-		? "flex flex-col md:flex-row-reverse items-center gap-4 p-4 border-solid border-2 border-gray-400 rounded-2xl bg-white"
-		: "flex flex-col md:flex-row items-center gap-4 p-4 border-solid border-2 border-gray-400 rounded-2xl bg-white"}
+		? "flex flex-col md:flex-row-reverse items-center gap-4 p-4 border-solid border-2 border-gray-400 rounded-2xl bg-background shadow-slate-800 shadow-2xl"
+		: "flex flex-col md:flex-row items-center gap-4 p-4 border-solid border-2 border-gray-400 rounded-2xl bg-background shadow-slate-800 shadow-2xl "}
 >
 	<Image src={img} width={100} height={100} alt={alt} class="rounded-xl" />
+	<!-- only text container -->
 	<div
 		class={reverse
-			? "flex flex-col gap-8 justify-center items-center lg:items-end text-justify"
-			: "flex flex-col gap-8 justify-center items-center lg:items-start text-justify"}
+			? "flex flex-col gap-2 justify-center items-center md:items-end text-justify"
+			: "flex flex-col gap-2 justify-center items-center md:items-start text-justify"}
 	>
 		<h2 class="font-bold text-xl">
 			{title}

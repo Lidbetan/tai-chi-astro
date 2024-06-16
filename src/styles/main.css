@@ -1,28 +1,65 @@
 @font-face {
-    font-family: "Philosopher-Bold";
-    src: url("/Philosopher-Bold.ttf");
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Philosopher-Bold";
+	src: url("/Philosopher-Bold.ttf");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
 }
 @font-face {
-    font-family: "Philosopher-BoldItalic";
-    src: url("/Philosopher-BoldItalic.ttf");
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Philosopher-BoldItalic";
+	src: url("/Philosopher-BoldItalic.ttf");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
 }
 @font-face {
-    font-family: "Philosopher-Italic";
-    src: url("/Philosopher-Italic.ttf");
-    font-weight: normal;
-    font-style: italic;
-    font-display: swap;
+	font-family: "Philosopher-Italic";
+	src: url("/Philosopher-Italic.ttf");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
 }
 @font-face {
-    font-family: "Philosopher-Regular";
-    src: url("/Philosopher-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-family: "Philosopher-Regular";
+	src: url("/Philosopher-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+/* Underlines */
+@media (min-width: 320px) {
+	.link-underline::before {
+		content: "";
+		position: absolute;
+		display: block;
+		width: 33%;
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: #ef9932;
+		transform: scaleX(0);
+		transform-origin: top left;
+		transition: transform 0.3s ease;
+	}
+	.link-underline:hover::before {
+		transform: scaleX(1);
+	}
+}
+
+@media (min-width: 375px) {
+	.link-underline::before {
+		width: 25%;
+	}
+}
+@media (min-width: 425px) {
+	.link-underline::before {
+		width: 23%;
+	}
+}
+
+@media (min-width: 768px) {
+	.link-underline::before {
+		width: 100%;
+		transform-origin: center;
+	}
 }
