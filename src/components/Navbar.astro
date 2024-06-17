@@ -1,10 +1,9 @@
 ---
 export const prerender = true;
+console.log("This renders on Server Side");
 ---
 
-<nav
-	class="absolute z-40 w-full xl:w-10/12 xl:left-[100x] border-gray-200 dark:bg-gray-900"
->
+<nav class="z-40 w-full xl:w-10/12">
 	<div
 		class="flex flex-wrap gap-4 lg:flex-nowrap bg-transparent items-center justify-evenly p-4"
 	>
@@ -18,7 +17,7 @@ export const prerender = true;
 				alt="Logo-Escuela-Gimnasia-y-Cultura-China"
 			/>
 			<span
-				class="text-center text-4xl lg:text-2xl lg:text-start font-bold dark:text-white"
+				class="brand-name text-center text-4xl lg:text-2xl lg:text-start font-bold dark:text-white"
 				>Escuela de Gimnasia y Cultura China</span
 			>
 		</a>
