@@ -8,7 +8,7 @@ import Email from "./Icons/Email.astro";
 ---
 
 <div
-	class="overflow-hidden p-2 gap-1 relative flex flex-col justify-between items-center mt-autoflex w-full h-[550px] md:h-[170px] text-black"
+	class="overflow-hidden p-2 gap-1 relative flex flex-col justify-between items-center mt-autoflex w-full h-[550px] md:h-[170px] text-black bg-background"
 >
 	<!-- DRAGON BACKGROUND CONTAINER -->
 	<div
@@ -18,9 +18,9 @@ import Email from "./Icons/Email.astro";
 	<h2 class="brand-name z-10 text-center font-bold text-xl">
 		Escuela de Gimnasia y Cultura China
 	</h2>
-	<div class="flex flex-col gap-10 md:flex-row w-3/4 justify-evenly">
+	<div class="z-10 flex flex-col gap-10 md:flex-row w-3/4 justify-evenly">
 		<!-- REDES SOCIALES -->
-		<div class="z-10 flex flex-col items-center gap-4">
+		<div class="flex flex-col items-center gap-4">
 			<h2>Seguinos en</h2>
 			<div class="flex flex-row w-full justify-center gap-6">
 				<Facebook fillColor="#000000" width={34} height={34} />
@@ -28,7 +28,7 @@ import Email from "./Icons/Email.astro";
 			</div>
 		</div>
 		<!-- CELULAR/EMAIL -->
-		<div class="z-10 flex flex-col items-center gap-1">
+		<div class="flex flex-col items-center gap-1">
 			<h2>Contáctanos</h2>
 			<div class="flex flex-col gap-2 w-full justify-center items-center">
 				<div class="flex flex-row gap-1">
@@ -42,7 +42,7 @@ import Email from "./Icons/Email.astro";
 			</div>
 		</div>
 		<!-- LOGO CENTRO MULAN Y SHAOLIN LA -->
-		<div class="z-10 flex flex-col items-center gap-4">
+		<div class="flex flex-col items-center gap-4">
 			<h2>Avalados por</h2>
 			<div class="flex flex-row w-full justify-evenly">
 				<Image

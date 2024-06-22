@@ -27,22 +27,22 @@ const { title, mountains } = Astro.props;
 		<!-- <ViewTransitions /> -->
 	</head>
 	<body class="bg-background">
-		<div class="wrapper w-full min-h-dvh flex flex-col justify-between">
-			<header>
+		<div class="relative wrapper w-full min-h-dvh flex flex-col justify-between">
+			<header class="absolute top-0 z-10">
 				<Navbar />
 			</header>
 			<!-- Banner montañas, se renderiza solo en homepage -->
 			{
 				mountains && (
-					<div class="-z-10 opacity-70 absolute bg-mountainsBg bg-cover bg-no-repeat bg-center w-full h-[150vh] md:h-[700px] flex flex-col flex-grow overflow-hidden" />
+					<div class="-z-10 opacity-70 absolute bg-mountainsBg bg-cover bg-no-repeat bg-center w-full h-[150vh] md:h-[700px] overflow-hidden" />
 				)
 			}
 
-			<main class="flex-1 py-20">
+			<main class="flex-1 mt-[300px] md:mt-[150px] lg:mt-[125px]">
 				<slot />
 			</main>
 
-			<div class="">
+			<div>
 				<Footer />
 			</div>
 		</div>
