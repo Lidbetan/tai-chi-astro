@@ -1,6 +1,7 @@
 ---
 import Footer from "@components/Footer.astro";
 import Navbar from "@components/Navbar.astro";
+import "../styles/main.css";
 // import ViewTransitions from "astro/components/ViewTransitions.astro";
 
 interface Props {
@@ -23,7 +24,7 @@ const { title, mountains } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/assets/favicon32x32.png" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
-		<link rel="stylesheet" href="/src/styles/main.css" />
+
 		<!-- <ViewTransitions /> -->
 	</head>
 	<body class="bg-background">
