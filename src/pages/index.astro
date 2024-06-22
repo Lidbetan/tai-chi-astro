@@ -1,11 +1,42 @@
 ---
+import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Escuela de Gimnasia y Cultura China">
-	<div class="w-full h-full flex flex-col justify-center items-center">
-		<main>
-			<h1>HOME</h1>
-		</main>
+<Layout title="Escuela de Gimnasia y Cultura China" mountains={true}>
+	<!-- BANNER -->
+	<div
+		class="flex flex-col md:flex-row justify-center items-center animate-fade-in-up animate-delay-500 animate-duration-slower py-10"
+	>
+		<Image
+			src="/assets/caracteres-chinos.png"
+			width={200}
+			height={600}
+			alt="Caracteres-chinos"
+		/>
+		<span class="font-bold italic text-5xl">"Aqui va <br /> una frase"</span>
+	</div>
+	<!-- INTRODUCCION -->
+	<div class="min-h-[150px] bg-background py-10 w-full">
+		<div
+			class="flex flex-col gap-4 justify-center items-center py-10 w-11/12 mx-auto"
+		>
+			<Image
+				class="rounded-xl"
+				src="/assets/sergio.png"
+				alt="Imagen Fundador Escuela de Gimnasia y Cultura China"
+				width={300}
+				height={600}
+			/>
+			<div class="text-center">
+				<p class="uppercase font-semibold text-lg">Profesor Sergio Id Betan</p>
+				<p>
+					Fundador de la Escuela de Gimnasia de Gimnasia y Cultura China, <br /> desde
+					el año 1994 promueve y difunde el Taijiquan, Qigong y Meditación Chan (Zen)
+					<br />con el espíritu de que las personas obtengan salud y bienestar a
+					través de su práctica.
+				</p>
+			</div>
+		</div>
 	</div>
 </Layout>
