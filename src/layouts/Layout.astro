@@ -35,11 +35,11 @@ const { title, mountains } = Astro.props;
 			<!-- Banner montañas, se renderiza solo en homepage -->
 			{
 				mountains && (
-					<div class="-z-10 opacity-70 absolute bg-mountainsBg bg-cover bg-no-repeat bg-center w-full h-[150vh] md:h-[700px] overflow-hidden" />
+					<div class="-z-10 opacity-70 absolute bg-mountainsBg bg-cover bg-no-repeat bg-center w-full h-[150vh] md:h-[115vh] overflow-hidden" />
 				)
 			}
 
-			<main class="flex-1 mt-[300px] md:mt-[150px] lg:mt-[125px]">
+			<main class="flex-1 mt-[300px] md:mt-[150px] lg:mt-[125px] snap-y">
 				<slot />
 			</main>
 
