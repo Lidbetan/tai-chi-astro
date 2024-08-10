@@ -1,3 +1,6 @@
+// tailwind.config.cjs
+const { nextui } = require("@nextui-org/react");
+
 /** @type {import('tailwindcss').Config} */
 import animations from "@midudev/tailwind-animations";
 
@@ -5,6 +8,7 @@ export default {
 	content: [
 		"./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}",
 		"./node_modules/flowbite/**/*.js",
+		"./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
 	],
 	theme: {
 		extend: {
@@ -43,5 +47,6 @@ export default {
 			},
 		},
 	},
-	plugins: [require("flowbite/plugin"), animations],
+	darkMode: "class",
+	plugins: [nextui()],
 };
