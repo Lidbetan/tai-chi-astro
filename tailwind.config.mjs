@@ -8,6 +8,9 @@ export default {
 	],
 	theme: {
 		extend: {
+			gridTemplateRows: {
+				layout: "auto 1fr auto",
+			},
 			backgroundImage: {
 				mountainsBg: "url(/assets/background.png)",
 				mountains1: "url(/assets/mountain_1.png)",
