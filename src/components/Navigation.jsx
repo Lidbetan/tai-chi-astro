@@ -46,7 +46,15 @@ export default function Navigation() {
 			<NavbarContent className="hidden lg:flex gap-8" justify="center">
 				{menuItems.map((item, index) => (
 					<NavbarMenuItem key={`${item}-${index}`}>
-						<Link className="w-full link-underline text-black" href="#" size="lg">
+						<Link
+							className="w-full link-underline text-black"
+							href={
+								item === "Contacto"
+									? "https://api.whatsapp.com/send?phone=5493415424959"
+									: `${item}`
+							}
+							size="lg"
+						>
 							{item}
 						</Link>
 					</NavbarMenuItem>
@@ -65,7 +73,11 @@ export default function Navigation() {
 							// 		: "foreground"
 							// }
 							className="w-full text-black link-underline mt-6"
-							href="#"
+							href={
+								item === "Contacto"
+									? "https://api.whatsapp.com/send?phone=5493415424959"
+									: `/${item}`
+							}
 							size="lg"
 						>
 							{item}
